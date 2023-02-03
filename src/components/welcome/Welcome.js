@@ -1,37 +1,17 @@
-import React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import React from 'react';
+import HomePage from './HomePage';
+import Login from './Login';
+
+const Stack = createNativeStackNavigator();
 
 const Welcome = () => {
-
-    const enterSiteHndlr = () => {
-        
-      };
-
   return (
-    <View
-      style={styles.welcomeBG}>
-      <Image source={require('../../../src/assets/images/srivn_logo.png')} style={styles.srivnLogo}></Image> 
-    </View>
-  )
-}
+    <Stack.Navigator initialRouteName='login'>
+      <Stack.Screen name='login' component={Login} />
+      <Stack.Screen name='welcome' component={HomePage} />
+    </Stack.Navigator>
+  );
+};
 
-export default Welcome
-
-const styles = StyleSheet.create({
-    welcomeBG: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#083b66',
-      },
-      srivnLogo: {
-        height: 200,
-        width: 200
-      },
-      welcomeTxt: {
-        fontSize : 24,
-        color: '#FFF'
-      }
-})
-
-//
+export default Welcome;

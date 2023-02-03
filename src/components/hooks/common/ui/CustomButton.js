@@ -1,11 +1,19 @@
 import React from 'react';
-import {Pressable} from 'react-native/types';
+import {Pressable, StyleSheet, Text, View} from 'react-native';
 
-const CustomButton = () => {
+const CustomButton = (props) => {
+
+  const onPress = () => {
+    console.log('Button Pressed !')
+    props.btnAction()
+  }
+
   return (
+    <View>
     <Pressable style={styles.button} onPress={onPress}>
-      <Text style={styles.text}>{title}</Text>
+      <Text style={styles.text}>Login</Text>
     </Pressable>
+    </View> 
   );
 };
 
@@ -19,13 +27,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: 'black',
+    backgroundColor: '#FFF',
   },
   text: {
     fontSize: 16,
     lineHeight: 21,
     fontWeight: 'bold',
     letterSpacing: 0.25,
-    color: 'white',
+    color: '#083b66',
   },
 });
