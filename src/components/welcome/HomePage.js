@@ -1,10 +1,13 @@
 import React from 'react'
 import { Text, View } from 'react-native'
+import LibraryHome from '../library/LibraryHome'
+import Dashboard from './Dashboard'
 
 const HomePage = () => {
   return (
     <View>
-      <Text>HomePage</Text>
+      <LibraryHome></LibraryHome>
+      <Dashboard></Dashboard>
     </View>
   )
 }
