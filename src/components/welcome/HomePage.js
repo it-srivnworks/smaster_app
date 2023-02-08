@@ -15,8 +15,8 @@ const HomePage = () => {
       screenOptions={{
         tabBarStyle: {position: 'absolute'},
         tabBarShowLabel: false,
-        tabBarActiveBackgroundColor: '#FFF',
-        //tabBarInactiveBackgroundColor: '#083b66',
+        //tabBarActiveBackgroundColor: '#ced8e0',
+        //tabBarInactiveBackgroundColor: '#FFF',
         tabBarLabelStyle: {color : '#FFF', fontSize: 12},
         tabBarStyle: {
           height: 60,
@@ -24,8 +24,8 @@ const HomePage = () => {
           right: 4,
           bottom: 4,
           position: 'absolute',
-          borderRadius: 15,
-          backgroundColor: '#083b66',
+          borderRadius: 10,
+          backgroundColor: '#ced8e0',
         },
       }}>
       <BottomTab.Screen
